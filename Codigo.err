@@ -1,1 +1,3 @@
-Error[yy] D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c 31 : syntax error
+Warning[2058] D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c 172 : call of function without prototype
+Warning[2073] D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c 327 : null-terminated initializer string too long
+Warning[2073] D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c 329 : null-terminated initializer string too long
