@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <delays.h>
+#include <stdlib.h>
 
 // Configuração do microcontrolador para execução de instruções
 
@@ -37,12 +38,31 @@
 #define l4 PORTBbits.RB7 //Pinos para leitura do keyboard
 
 //declara as suas variaveis de software
+typedef struct usuario Usuario;
 
+struct usuario{
+	char id[3];
+	char senha[5];
+};
+
+short numeroUser = 1;
+Usuario vUser[5] = {{"99","9999"},
+					{"ff","ffff"},
+					{"ff","ffff"},
+					{"ff","ffff"},
+					{"ff","ffff"}};
 
 void DelayFor20TCY(void){
 	Nop();Nop();Nop();Nop();Nop();
 	Nop();Nop();Nop();Nop();Nop();
 	Nop();Nop();Nop();Nop();Nop();
+}
+
+void DelayFor500ms(void){
+	int i;
+	for(i=0;i<100;i++){
+		Delay10KTCYx(1);
+	}
 }
 
 void Pulse(void){
@@ -85,7 +105,7 @@ void EscInstLCD(unsigned char _inst){
 
 //Inicia LCD
 void IniciaLCD(void){
-	const unsigned char seq_Inic[3] = {0x0F,0x06,0x01};
+	const unsigned char seq_Inic[7] = {0x30,0x30,0x30,0x038,0x0F,0x06,0x01};
 	unsigned char i;
 	char x;
 	_EN = 0;
@@ -95,17 +115,7 @@ void IniciaLCD(void){
 	TRIS_CONT_LCD = 0;
 	TRIS_PORT_LCD = 0;
 	
-	for(i = 0; i<3 ; i++){
-		PORT_LCD = 0x30;
-		Pulse();
-		Delay10KTCYx(1);
-	}
-	
-	PORT_LCD = 0x038;
-	Pulse();
-	Delay10KTCYx(1);
-	
-	for(i = 0 ; i<3 ; i++){
+	for(i = 0 ; i<7 ; i++){
 		PORT_LCD = seq_Inic[i];
 		Pulse();
 		Delay10KTCYx(1);
@@ -132,6 +142,18 @@ void EscStringLCD(char *buff){
 		 EscDataLCD(*buff);
 		buff++;
 	}
+	while(TesteBusyFlag());
+	return;
+}
+
+//Escreve string da memória ROM
+void EscStringLCD_ROM(const rom char *buff){
+	while(*buff){
+		while(TesteBusyFlag());
+		 EscDataLCD(*buff);
+		buff++;
+	}
+	while(TesteBusyFlag());
 	return;
 }
 
@@ -163,7 +185,7 @@ void TestPixelsLCD(void){
 
 
 //Varre o teclado
-char VarrerKey(void){  //Função para Varredura do teclad
+char VarrerKey(void){  //Função para Varredura do tecla
 					
 	static unsigned char x = 0; 		
 	
@@ -272,40 +294,7 @@ char VarrerKey(void){  //Função para Varredura do teclad
 	return 'G';
 	
 }
-
-/*void trataKeyboad (void){  								//função para trarar as teclas do keyboard
-
-	short x = 0;
-	short i;		
-		x = VarrerKey();								//chama a função varrer teclado
-		if(x!='G'){										//Se x='G', Nenhuma tecla foi teclada ou ainda não foi tratada
-			 if(x==-2){              					//alterna entre os modos do relogio (* = -2)
-				if(modo == 0) modo = 1; 				//modo=1, mostra MM:SS
-				else if(modo == 1) modo = 2;			//modo=2, mostra alarme HH:MM
-				else modo = 0;							//modo=0, mostra HH:MM
-			}
-			else if(x==-3){								//altera o setModo
-				if(setModo == 0) setModo = 1; 			//modo=1, posivel setar a hora (relogio ou alarme)
-				else if(setModo == 1) setModo = 2;		//modo=2, possivel setar o minuto (relogio ou alarme)
-				else setModo = 0;						//modo=0, modo set desligado
-			}			
-			else for(i = 0; i<10 && setModo!=0; i++){  //Tratar o teclado numerico
-					if(x==i){							//Valor digitado = i?
-						if(dezena == 'G') {				//dezena está vazia?
-							dezena = i;					//associa o valor digitado a dezena
-							i = 10;						//i > que 10, para sair do for
-						}
-						else {							//se não(dezena ja possui um valor)
-							unidade = i;				//associa o valor digitado a unidade
-							i=10;						//sai do for
-						}
-					}
-				}
-			
-		}
-}*/
-
-
+//Iniciar Pinos
 void Inic_Regs (void){   //Função para inicializar os pino
 	
 	TRISA = 0x00;
@@ -322,54 +311,268 @@ void Inic_Regs (void){   //Função para inicializar os pino
 
 }
 
+//Limpa e escreve na primeira linha
+void printLimpo(const rom char *buff){
+	
+	EscInstLCD(0x01); //Limpa LCD e mostra cursor piscando na primeira linha
+	while(TesteBusyFlag());
+	
+	while(*buff){
+		while(TesteBusyFlag());
+		EscDataLCD(*buff);
+		buff++;
+	}
+	while(TesteBusyFlag());
+	return;
+}
 
-void main(void){
-	char buf[9] = {"Usuário: "};
-	int dly = 0;
-	char buf02[7] = {"Senha: "};
-	char teste;
-	short i=0;
+//Escreve na segunda linha
+void print2Linha(const rom char *buff){
 	
-	Inic_Regs ();
-	IniciaLCD();
-	
-	EscInstLCD(0x01); //Limpa LCD e mostra cursor pisando
-	while(TesteBusyFlag());  //Espera LCD terminar execução
-	
-	EscStringLCD(buf);
+	EscInstLCD(0xC0); //cursor para segunda linha
 	while(TesteBusyFlag());
 	
-	EscInstLCD(0xC0); //Cursor para primeira posição da segunda coluna
+	while(*buff){
+		while(TesteBusyFlag());
+		EscDataLCD(*buff);
+		buff++;
+	}
 	while(TesteBusyFlag());
+	return;
+}
+
+//Exclui Usuario
+void excluirUsuario(void){
+	char idUser[3];
+	char digitado;
+	char confirme;
+	int i = 0;
+	int local = 1;
 	
-	EscStringLCD(buf02);
-	while(TesteBusyFlag());
+	printLimpo("Excluir Usuario ");
+	print2Linha("ID: ");
 	
-	EscInstLCD(0x89);
-	while(TesteBusyFlag());
-	
-	while(i<3){	
-		teste = VarrerKey();
-		if(teste != 'G') {
-			EscDataLCD(teste);
+	while(i<2){	
+		digitado = VarrerKey();
+		if(digitado != 'G') {
+			idUser[i] = digitado;
+			EscDataLCD(digitado);
 			i++;
 		}
+	}
+	idUser[3] = '\0';
+	
+	printLimpo("Excluir ID: ");
+	EscStringLCD(idUser);
+	print2Linha("  1-Sim 2-Nao   ");
+	
+	while(1){	
+		confirme = VarrerKey();
+		if(confirme == '1' || confirme == '2') {
+			break;
+		}
+	}
+	
+	if(confirme == '2'){
+		printLimpo("    Operacao");
+		print2Linha("   Cancelada!   ");
+		DelayFor500ms();
+	}
+	else{
+		while(local<5){
+			if((idUser[0] == vUser[local].id[0]) && (idUser[1] == vUser[local].id[1])){
+				break;
+			}
+			local++;
+		}
+		vUser[local].id[0] = 'f';
+		vUser[local].id[1] = 'f';
+		printLimpo("Usuario: ");
+		EscStringLCD(idUser);
+		print2Linha("   Excluido!   ");
+		DelayFor500ms();
+		return;		
+	}
+}
+
+//Cadastra novo usuario
+void cadastrar(void){
+	Usuario userTemp;
+	short aux,i;
+	char numero[11] ={"0123456789"};
+	char digitado;
+	char senha[5];
+	
+//	userTemp = malloc (sizeof (Usuario));
+
+	for(i=1;(vUser[i].id[0] != 'f') && i<5 ; i++){}
+	if(i >= 5){
+		printLimpo("     Maximo     ");
+		print2Linha("    Usuarios    ");
+		DelayFor500ms();
+		return;
+	}
+	
+	aux = numeroUser/10;
+	userTemp.id[0] = numero[aux];
+	aux = numeroUser%10;
+	userTemp.id[1] = numero[aux];
+	userTemp.id[2] = '\0';
+	aux = 0;
+	
+	do{
+		printLimpo("Novo ID: ");
+		EscStringLCD(userTemp.id);
+		print2Linha("Senha: ");
+	
+		for(i=0;i<4;){	
+			digitado = VarrerKey();
+			if(digitado != 'G') {
+				userTemp.senha[i] = digitado;
+				EscDataLCD('*');
+				i++;
+			}
+		}
+		
+		printLimpo("Confirmar");
+		print2Linha("Senha: ");
+		for(i=0;i<4;){	
+			digitado = VarrerKey();
+			if(digitado != 'G') {
+				senha[i] = digitado;
+				EscDataLCD('*');
+				i++;
+			}
+		}
+		
+		if((userTemp.senha[0] != senha[0]) || (userTemp.senha[1] != senha[1]) ||
+		(userTemp.senha[2] != senha[3]) ||(userTemp.senha[3] != senha[3])){
+				printLimpo("   Senhas nao   ");
+				print2Linha("    Conferem    ");
+				aux++;
+				DelayFor500ms();
+		}
+		else {
+			printLimpo("Usuario Criado");
+			print2Linha("  com Sucesso   ");
+			
+			for(i=1;(vUser[i].id[0] != 'f') && i<5 ; i++){}
+			vUser[i] = userTemp;
+			numeroUser++;
+			DelayFor500ms();
+			break;
+		}
+	
+	}while(aux<3);
+	
+	if(aux >= 3){
+		printLimpo("Tente Novamente ");
+		print2Linha("    Depois      ");
+		DelayFor500ms();
+		return;
+	}
+	
+}
+
+//Menu Administrador
+void adminMenu (void){
+	char confirme;
+	
+	printLimpo("1-Novo 2-Excluir");
+	print2Linha("3-Sair          ");
+	
+	while(1){	
+		confirme = VarrerKey();
+		if(confirme == '1' || confirme == '2' || confirme == '3') {
+			break;
+		}
+	}
+	
+	if(confirme == '1'){
+		cadastrar();
+	}else if(confirme == '2'){
+		excluirUsuario();
+	}else{
+		return;
+	}
+	
+}
+
+//Recebe usuario e senha e valida entrada
+void receberSenha(void){
+	int i,local;
+	char digitado;
+	Usuario userTemp;
+	Usuario userAux;
+
+	printLimpo("Usuario: ");
+	print2Linha("Senha: ");
+	
+	EscInstLCD(0x89); //Coloca cursor apos a palavra usuario
+	while(TesteBusyFlag());
+	i = 0;
+	while(i<2){	
+		digitado = VarrerKey();
+		if(digitado != 'G') {
+			userTemp.id[i] = digitado;
+			EscDataLCD(digitado);
+			i++;
+		}
+	}
+	local = 0;
+	while(local<5){
+		if((userTemp.id[0] == vUser[local].id[0]) && (userTemp.id[1] == vUser[local].id[1])){
+			break;
+		}
+		local++;
+	}
+	
+	if((userTemp.id[0] != vUser[local].id[0]) || (userTemp.id[1] != vUser[local].id[1])){
+
+		printLimpo("Usuario Invalido");
+		DelayFor500ms();
+		return;
 	}
 	
 	EscInstLCD(0xC7);
 	while(TesteBusyFlag());
 	i=0;
-	
+
 	while(i<4){	
-		teste = VarrerKey();
-		if(teste != 'G') {
+		digitado = VarrerKey();
+		if(digitado != 'G') {
+			userTemp.senha[i] = digitado;
 			EscDataLCD('*');
 			i++;
 		}
 	}
+		
+	if((userTemp.senha[0] != vUser[local].senha[0]) || (userTemp.senha[1] != vUser[local].senha[1]) || 
+		(userTemp.senha[2] != vUser[local].senha[2]) || (userTemp.senha[3] != vUser[local].senha[3])){
+		printLimpo(" Senha Invalida");
+		DelayFor500ms();
+			return;
+	}
+	else {
+		
+		if((userTemp.id[0] == '9') && (userTemp.id[1] == '9')){
+			adminMenu();
+			return;
+		}
+		else {
+			printLimpo(" Aesso Liberado ");
+		}
+		DelayFor500ms();
+		return;
+	}
+}
+
+void main(void){
 	
-	EscInstLCD(0x80); //Cursor para primeira posição da segunda coluna
-	while(TesteBusyFlag());  //Espera LCD terminar execução
+	Inic_Regs ();
+	IniciaLCD();
 	
-	while(1);
+	while(1){
+		receberSenha();
+	}
 }	
