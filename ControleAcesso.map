@@ -1,32 +1,32 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Tue Nov 18 12:57:19 2014
+Linker Map File - Created Wed Nov 19 01:27:55 2014
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
                _entry_scn       code   0x000000    program   0x000006
                    .cinit    romdata   0x000006    program   0x00000e
-           .code_Codigo.o       code   0x000014    program   0x000f38
-             .stringtable    romdata   0x000f4c    program   0x000162
-               _cinit_scn       code   0x0010ae    program   0x00009e
-                     PROG       code   0x00114c    program   0x00004c
-             D10KTCYXCODE       code   0x001198    program   0x00002e
-         .code_fxd1616u.o       code   0x0011c6    program   0x00002c
-                    .code       code   0x0011f2    program   0x000020
-             _startup_scn       code   0x001212    program   0x00001c
-           .code_pullen.o       code   0x00122e    program   0x000004
-           .code___init.o       code   0x001232    program   0x000002
-        .romdata___init.o    romdata   0x001234    program   0x000000
-        .idata___init.o_i    romdata   0x001234    program   0x000000
-      .romdata_fxd1616u.o    romdata   0x001234    program   0x000000
-      .idata_fxd1616u.o_i    romdata   0x001234    program   0x000000
-        .romdata_pullen.o    romdata   0x001234    program   0x000000
-        .idata_pullen.o_i    romdata   0x001234    program   0x000000
-        .romdata_Codigo.o    romdata   0x001234    program   0x000000
-        .idata_Codigo.o_i    romdata   0x001234    program   0x00002b
-         .romdata_c018i.o    romdata   0x001234    program   0x000000
-         .idata_c018i.o_i    romdata   0x001234    program   0x000000
-            .code_c018i.o       code   0x001260    program   0x000000
+           .code_Codigo.o       code   0x000014    program   0x001028
+             .stringtable    romdata   0x00103c    program   0x000176
+               _cinit_scn       code   0x0011b2    program   0x00009e
+                     PROG       code   0x001250    program   0x00004c
+             D10KTCYXCODE       code   0x00129c    program   0x00002e
+         .code_fxd1616u.o       code   0x0012ca    program   0x00002c
+                    .code       code   0x0012f6    program   0x000020
+             _startup_scn       code   0x001316    program   0x00001c
+           .code_pullen.o       code   0x001332    program   0x000004
+           .code___init.o       code   0x001336    program   0x000002
+        .romdata___init.o    romdata   0x001338    program   0x000000
+        .idata___init.o_i    romdata   0x001338    program   0x000000
+      .romdata_fxd1616u.o    romdata   0x001338    program   0x000000
+      .idata_fxd1616u.o_i    romdata   0x001338    program   0x000000
+        .romdata_pullen.o    romdata   0x001338    program   0x000000
+        .idata_pullen.o_i    romdata   0x001338    program   0x000000
+        .romdata_Codigo.o    romdata   0x001338    program   0x000000
+        .idata_Codigo.o_i    romdata   0x001338    program   0x00002b
+         .romdata_c018i.o    romdata   0x001338    program   0x000000
+         .idata_c018i.o_i    romdata   0x001338    program   0x000000
+            .code_c018i.o       code   0x001364    program   0x000000
   .config_300001_Codigo.o    romdata   0x300001    program   0x000001
   .config_300002_Codigo.o    romdata   0x300002    program   0x000001
   .config_300003_Codigo.o    romdata   0x300003    program   0x000001
@@ -54,42 +54,42 @@ Linker Map File - Created Tue Nov 18 12:57:19 2014
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x00125e      
+                            0x000000    0x001362      
                             0x300001    0x300003      
                             0x300005    0x300006      
-            4708 out of 33048 program addresses used, program memory utilization is 14%
+            4968 out of 33048 program addresses used, program memory utilization is 15%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                   D10K_1   0x0011a4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                    D10Kl   0x0011b0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                    D10Kx   0x0011a2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                   D1616S   0x00116e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                D1616SNEG   0x00117c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 D1616SOK   0x001178    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  D1616SX   0x00118e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  DA1616S   0x00115e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-             Delay10KTCYx   0x001198    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                   D10K_1   0x0012a8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kl   0x0012b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kx   0x0012a6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                   D1616S   0x001272    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x001280    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x00127c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x001292    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  DA1616S   0x001262    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+             Delay10KTCYx   0x00129c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
             DelayFor20TCY   0x000014    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
             DelayFor500ms   0x000034    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-            EnablePullups   0x00122e    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\PORTB\pullen.c
+            EnablePullups   0x001332    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\PORTB\pullen.c
                EscDataLCD   0x00017a    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                EscInstLCD   0x0000b0    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
              EscStringLCD   0x00019e    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
          EscStringLCD_ROM   0x0001f0    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                 FXD1616S   0x00114c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 FXD1616U   0x0011c6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                 FXD1616S   0x001250    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 FXD1616U   0x0012ca    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
                 Inic_Regs   0x000458    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                 IniciaLCD   0x0000d4    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                     Pulse   0x000084    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
             TestPixelsLCD   0x000246    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
             TesteBusyFlag   0x00008e    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                 VarrerKey   0x0002e2    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-       _D10KTCYXCODE_0010   0x0011a8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-       _D10KTCYXCODE_001C   0x0011b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_0010   0x0012ac    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_001C   0x0012b8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
          ___else_lbl00049   0x000300    program     static                          
          ___else_lbl00052   0x00031c    program     static                          
          ___else_lbl00055   0x000338    program     static                          
@@ -126,65 +126,70 @@ Linker Map File - Created Tue Nov 18 12:57:19 2014
            ___if_lbl00080   0x000430    program     static                          
            ___if_lbl00081   0x00044c    program     static                          
            ___if_lbl00083   0x00044c    program     static                          
-       ___return_lbl00000   0x000004    program     static                          
        ___return_lbl00000   0x000032    program     static                          
-       ___return_lbl00000   0x0011f0    program     static                          
-       ___return_lbl00001   0x00122c    program     static                          
-       ___return_lbl00002   0x00114a    program     static                          
+       ___return_lbl00000   0x000004    program     static                          
+       ___return_lbl00000   0x0012f4    program     static                          
+       ___return_lbl00001   0x001330    program     static                          
+       ___return_lbl00002   0x00124e    program     static                          
        ___return_lbl00047   0x000456    program     static                          
                __config_0   0x300001    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                __config_1   0x300002    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                __config_2   0x300003    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                __config_3   0x300005    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                __config_4   0x300006    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                   __init   0x001232    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-              __string_10   0x001052    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_11   0x001042    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_13   0x001031    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_14   0x001020    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_15   0x001016    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_16   0x00100e    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_17   0x001004    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_18   0x000ff3    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_19   0x000fe2    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_20   0x000fd3    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_21   0x000fc2    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_22   0x000fb1    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_23   0x000fa0    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_24   0x000f8f    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_25   0x000f7e    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_26   0x000f6d    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_27   0x000f5d    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_28   0x000f4c    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               __string_4   0x00109d    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               __string_5   0x001098    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               __string_6   0x00108b    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               __string_7   0x00107a    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               __string_8   0x00106d    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               __string_9   0x00105c    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-            __zero_memory   0x0011f2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                _do_cinit   0x0010ae    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                   __init   0x001336    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+              __string_10   0x001171    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_11   0x001160    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_12   0x001156    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_13   0x001146    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_15   0x001135    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_16   0x001124    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_17   0x00111a    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_18   0x001112    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_19   0x001108    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_20   0x0010f7    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_21   0x0010e6    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_22   0x0010d7    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_23   0x0010c6    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_24   0x0010b5    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_25   0x0010a4    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_26   0x001093    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_27   0x001082    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_28   0x001071    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_29   0x001061    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_30   0x001050    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_31   0x00103c    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+               __string_6   0x0011a1    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+               __string_7   0x00119c    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+               __string_8   0x00118f    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+               __string_9   0x00117e    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+            __zero_memory   0x0012f6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                _do_cinit   0x0011b2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 _startup   0x001212    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                adminMenu   0x000b9a    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                cadastrar   0x000760    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                compare_l   0x001208    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                copy_loop   0x001120    program     static                          
-            copy_one_byte   0x001126    program     static                          
-                     done   0x00114a    program     static                          
-             done_copying   0x001134    program     static                          
-                  endloop   0x0011ec    program     static                          
-           excluirUsuario   0x00053e    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                     loop   0x001222    program     static                          
-                     loop   0x0011d0    program     static                          
-                   loop_h   0x001200    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   loop_l   0x00120a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     main   0x000f3e    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              print2Linha   0x0004d8    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               printLimpo   0x000472    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-             receberSenha   0x000bfa    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                     test   0x0010c8    program     static                          
-               zero_block   0x001200    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                 _startup   0x001316    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                adminMenu   0x000c4e    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                cadastrar   0x000812    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                compare_l   0x00130c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+           configura_UART   0x000472    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                copy_loop   0x001224    program     static                          
+            copy_one_byte   0x00122a    program     static                          
+                     done   0x00124e    program     static                          
+             done_copying   0x001238    program     static                          
+                  endloop   0x0012f0    program     static                          
+           excluirUsuario   0x0005f0    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                     loop   0x0012d4    program     static                          
+                     loop   0x001326    program     static                          
+                   loop_h   0x001304    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   loop_l   0x00130e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                     main   0x00102a    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              print2Linha   0x00058a    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+               printLimpo   0x000524    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+             receberSenha   0x000cae    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                     test   0x0011cc    program     static                          
+        transmiteCaracter   0x000486    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+          transmiteString   0x0004a0    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+       transmiteStringRAM   0x0004e4    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+               zero_block   0x001304    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    ADCON1   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -487,17 +492,17 @@ Linker Map File - Created Tue Nov 18 12:57:19 2014
             TestPixelsLCD   0x000246    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                 VarrerKey   0x0002e2    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
          ___else_lbl00049   0x000300    program     static                          
-           ___if_lbl00050   0x00030c    program     static                          
            ___if_lbl00048   0x00030c    program     static                          
+           ___if_lbl00050   0x00030c    program     static                          
          ___else_lbl00052   0x00031c    program     static                          
            ___if_lbl00053   0x000328    program     static                          
            ___if_lbl00051   0x000328    program     static                          
          ___else_lbl00055   0x000338    program     static                          
-           ___if_lbl00054   0x000344    program     static                          
            ___if_lbl00056   0x000344    program     static                          
+           ___if_lbl00054   0x000344    program     static                          
          ___else_lbl00058   0x000354    program     static                          
-           ___if_lbl00059   0x000360    program     static                          
            ___if_lbl00057   0x000360    program     static                          
+           ___if_lbl00059   0x000360    program     static                          
          ___else_lbl00061   0x000376    program     static                          
            ___if_lbl00060   0x000382    program     static                          
            ___if_lbl00062   0x000382    program     static                          
@@ -505,11 +510,11 @@ Linker Map File - Created Tue Nov 18 12:57:19 2014
            ___if_lbl00063   0x00039e    program     static                          
            ___if_lbl00065   0x00039e    program     static                          
          ___else_lbl00067   0x0003ae    program     static                          
-           ___if_lbl00068   0x0003ba    program     static                          
            ___if_lbl00066   0x0003ba    program     static                          
+           ___if_lbl00068   0x0003ba    program     static                          
          ___else_lbl00070   0x0003ca    program     static                          
-           ___if_lbl00071   0x0003d6    program     static                          
            ___if_lbl00069   0x0003d6    program     static                          
+           ___if_lbl00071   0x0003d6    program     static                          
          ___else_lbl00073   0x0003ec    program     static                          
            ___if_lbl00074   0x0003f8    program     static                          
            ___if_lbl00072   0x0003f8    program     static                          
@@ -524,70 +529,75 @@ Linker Map File - Created Tue Nov 18 12:57:19 2014
            ___if_lbl00081   0x00044c    program     static                          
        ___return_lbl00047   0x000456    program     static                          
                 Inic_Regs   0x000458    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               printLimpo   0x000472    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              print2Linha   0x0004d8    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-           excluirUsuario   0x00053e    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                cadastrar   0x000760    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                adminMenu   0x000b9a    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-             receberSenha   0x000bfa    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                     main   0x000f3e    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_28   0x000f4c    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_27   0x000f5d    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_26   0x000f6d    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_25   0x000f7e    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_24   0x000f8f    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_23   0x000fa0    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_22   0x000fb1    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_21   0x000fc2    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_20   0x000fd3    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_19   0x000fe2    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_18   0x000ff3    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_17   0x001004    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_16   0x00100e    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_15   0x001016    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_14   0x001020    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_13   0x001031    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_11   0x001042    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_10   0x001052    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               __string_9   0x00105c    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               __string_8   0x00106d    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               __string_7   0x00107a    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               __string_6   0x00108b    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               __string_5   0x001098    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               __string_4   0x00109d    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                _do_cinit   0x0010ae    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x0010c8    program     static                          
-                copy_loop   0x001120    program     static                          
-            copy_one_byte   0x001126    program     static                          
-             done_copying   0x001134    program     static                          
-                     done   0x00114a    program     static                          
-       ___return_lbl00002   0x00114a    program     static                          
-                 FXD1616S   0x00114c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  DA1616S   0x00115e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                   D1616S   0x00116e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 D1616SOK   0x001178    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                D1616SNEG   0x00117c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  D1616SX   0x00118e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-             Delay10KTCYx   0x001198    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                    D10Kx   0x0011a2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                   D10K_1   0x0011a4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-       _D10KTCYXCODE_0010   0x0011a8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                    D10Kl   0x0011b0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-       _D10KTCYXCODE_001C   0x0011b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                 FXD1616U   0x0011c6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
-                     loop   0x0011d0    program     static                          
-                  endloop   0x0011ec    program     static                          
-       ___return_lbl00000   0x0011f0    program     static                          
-            __zero_memory   0x0011f2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   loop_h   0x001200    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-               zero_block   0x001200    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                compare_l   0x001208    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   loop_l   0x00120a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                 _startup   0x001212    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x001222    program     static                          
-       ___return_lbl00001   0x00122c    program     static                          
-            EnablePullups   0x00122e    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\PORTB\pullen.c
-                   __init   0x001232    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+           configura_UART   0x000472    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+        transmiteCaracter   0x000486    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+          transmiteString   0x0004a0    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+       transmiteStringRAM   0x0004e4    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+               printLimpo   0x000524    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              print2Linha   0x00058a    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+           excluirUsuario   0x0005f0    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                cadastrar   0x000812    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                adminMenu   0x000c4e    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+             receberSenha   0x000cae    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                     main   0x00102a    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_31   0x00103c    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_30   0x001050    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_29   0x001061    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_28   0x001071    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_27   0x001082    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_26   0x001093    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_25   0x0010a4    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_24   0x0010b5    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_23   0x0010c6    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_22   0x0010d7    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_21   0x0010e6    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_20   0x0010f7    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_19   0x001108    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_18   0x001112    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_17   0x00111a    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_16   0x001124    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_15   0x001135    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_13   0x001146    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_12   0x001156    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_11   0x001160    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_10   0x001171    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+               __string_9   0x00117e    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+               __string_8   0x00118f    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+               __string_7   0x00119c    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+               __string_6   0x0011a1    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                _do_cinit   0x0011b2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x0011cc    program     static                          
+                copy_loop   0x001224    program     static                          
+            copy_one_byte   0x00122a    program     static                          
+             done_copying   0x001238    program     static                          
+       ___return_lbl00002   0x00124e    program     static                          
+                     done   0x00124e    program     static                          
+                 FXD1616S   0x001250    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  DA1616S   0x001262    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                   D1616S   0x001272    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x00127c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x001280    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x001292    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+             Delay10KTCYx   0x00129c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kx   0x0012a6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                   D10K_1   0x0012a8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_0010   0x0012ac    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kl   0x0012b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_001C   0x0012b8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                 FXD1616U   0x0012ca    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                     loop   0x0012d4    program     static                          
+                  endloop   0x0012f0    program     static                          
+       ___return_lbl00000   0x0012f4    program     static                          
+            __zero_memory   0x0012f6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+               zero_block   0x001304    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   loop_h   0x001304    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                compare_l   0x00130c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   loop_l   0x00130e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                 _startup   0x001316    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x001326    program     static                          
+       ___return_lbl00001   0x001330    program     static                          
+            EnablePullups   0x001332    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\PORTB\pullen.c
+                   __init   0x001336    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
                __config_0   0x300001    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                __config_1   0x300002    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                __config_2   0x300003    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c

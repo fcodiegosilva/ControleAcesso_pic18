@@ -47,7 +47,7 @@ struct usuario{
 
 short numeroUser = 1;
 Usuario vUser[5] = {{"99","9999"},
-					{"ff","ffff"},
+					{"11","0000"},
 					{"ff","ffff"},
 					{"ff","ffff"},
 					{"ff","ffff"}};
@@ -311,6 +311,43 @@ void Inic_Regs (void){   //Função para inicializar os pino
 
 }
 
+//Confirgurar saida serial
+void configura_UART(void){
+	
+	TRISCbits.TRISC7 = 1;
+	TRISCbits.TRISC7 = 1;
+	TXSTA = 0b00100100;
+	RCSTA = 0b10010000;
+	BAUDCON = 0b00000000;
+	SPBRG = 51;
+}
+
+//Transmite um caractere pela serial
+void transmiteCaracter(char dado){
+	
+	TXREG = dado;
+	while(TXSTAbits.TRMT);
+	
+}
+
+void transmiteString (const rom char *buff){
+	while(*buff){
+		while(!PIR1bits.TXIF);
+		TXREG = *buff;
+		buff++;
+	}
+
+}
+
+void transmiteStringRAM (char *buff){
+	while(*buff){
+		while(!PIR1bits.TXIF);
+		TXREG = *buff;
+		buff++;
+	}
+
+}
+
 //Limpa e escreve na primeira linha
 void printLimpo(const rom char *buff){
 	
@@ -503,7 +540,6 @@ void receberSenha(void){
 	int i,local;
 	char digitado;
 	Usuario userTemp;
-	Usuario userAux;
 
 	printLimpo("Usuario: ");
 	print2Linha("Senha: ");
@@ -560,7 +596,12 @@ void receberSenha(void){
 			return;
 		}
 		else {
+			userTemp.id[3] = '\0';
 			printLimpo(" Aesso Liberado ");
+			transmiteString("Usuario: ");
+			transmiteStringRAM(userTemp.id);
+			transmiteString(", Acesso Liberado.\n");
+			
 		}
 		DelayFor500ms();
 		return;
@@ -571,8 +612,9 @@ void main(void){
 	
 	Inic_Regs ();
 	IniciaLCD();
+	configura_UART();
 	
 	while(1){
 		receberSenha();
 	}
-}	
+}
