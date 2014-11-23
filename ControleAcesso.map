@@ -1,41 +1,41 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Wed Nov 19 01:27:55 2014
+Linker Map File - Created Sun Nov 23 16:31:38 2014
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
                _entry_scn       code   0x000000    program   0x000006
                    .cinit    romdata   0x000006    program   0x00000e
-           .code_Codigo.o       code   0x000014    program   0x001028
-             .stringtable    romdata   0x00103c    program   0x000176
-               _cinit_scn       code   0x0011b2    program   0x00009e
-                     PROG       code   0x001250    program   0x00004c
-             D10KTCYXCODE       code   0x00129c    program   0x00002e
-         .code_fxd1616u.o       code   0x0012ca    program   0x00002c
-                    .code       code   0x0012f6    program   0x000020
-             _startup_scn       code   0x001316    program   0x00001c
-           .code_pullen.o       code   0x001332    program   0x000004
-           .code___init.o       code   0x001336    program   0x000002
-        .romdata___init.o    romdata   0x001338    program   0x000000
-        .idata___init.o_i    romdata   0x001338    program   0x000000
-      .romdata_fxd1616u.o    romdata   0x001338    program   0x000000
-      .idata_fxd1616u.o_i    romdata   0x001338    program   0x000000
-        .romdata_pullen.o    romdata   0x001338    program   0x000000
-        .idata_pullen.o_i    romdata   0x001338    program   0x000000
-        .romdata_Codigo.o    romdata   0x001338    program   0x000000
-        .idata_Codigo.o_i    romdata   0x001338    program   0x00002b
-         .romdata_c018i.o    romdata   0x001338    program   0x000000
-         .idata_c018i.o_i    romdata   0x001338    program   0x000000
-            .code_c018i.o       code   0x001364    program   0x000000
+           .code_Codigo.o       code   0x000014    program   0x0014f6
+             .stringtable    romdata   0x00150a    program   0x000178
+                     PROG       code   0x001682    program   0x0000a6
+               _cinit_scn       code   0x001728    program   0x00009e
+             D10KTCYXCODE       code   0x0017c6    program   0x00002e
+         .code_fxd1616u.o       code   0x0017f4    program   0x00002c
+                    .code       code   0x001820    program   0x000020
+             _startup_scn       code   0x001840    program   0x00001c
+           .code_pullen.o       code   0x00185c    program   0x000004
+           .code___init.o       code   0x001860    program   0x000002
+        .romdata___init.o    romdata   0x001862    program   0x000000
+        .idata___init.o_i    romdata   0x001862    program   0x000000
+      .romdata_fxd1616u.o    romdata   0x001862    program   0x000000
+      .idata_fxd1616u.o_i    romdata   0x001862    program   0x000000
+        .romdata_pullen.o    romdata   0x001862    program   0x000000
+        .idata_pullen.o_i    romdata   0x001862    program   0x000000
+        .romdata_Codigo.o    romdata   0x001862    program   0x000000
+        .idata_Codigo.o_i    romdata   0x001862    program   0x00002b
+         .romdata_c018i.o    romdata   0x001862    program   0x000000
+         .idata_c018i.o_i    romdata   0x001862    program   0x000000
+            .code_c018i.o       code   0x00188e    program   0x000000
   .config_300001_Codigo.o    romdata   0x300001    program   0x000001
   .config_300002_Codigo.o    romdata   0x300002    program   0x000001
   .config_300003_Codigo.o    romdata   0x300003    program   0x000001
   .config_300005_Codigo.o    romdata   0x300005    program   0x000001
   .config_300006_Codigo.o    romdata   0x300006    program   0x000001
-                MATH_DATA      udata   0x000000       data   0x000010
-                 .tmpdata      udata   0x000010       data   0x000002
-                DELAYDAT2      udata   0x000012       data   0x000001
-                DELAYDAT1      udata   0x000013       data   0x000001
+                MATH_DATA      udata   0x000000       data   0x000014
+                 .tmpdata      udata   0x000014       data   0x000006
+                DELAYDAT2      udata   0x00001a       data   0x000001
+                DELAYDAT1      udata   0x00001b       data   0x000001
           .idata_Codigo.o      idata   0x000060       data   0x00002b
            .udata_c018i.o      udata   0x00008b       data   0x00000a
            .idata_c018i.o      idata   0x000095       data   0x000000
@@ -54,142 +54,156 @@ Linker Map File - Created Wed Nov 19 01:27:55 2014
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x001362      
+                            0x000000    0x00188c      
                             0x300001    0x300003      
                             0x300005    0x300006      
-            4968 out of 33048 program addresses used, program memory utilization is 15%
+            6290 out of 33048 program addresses used, program memory utilization is 19%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                   D10K_1   0x0012a8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                    D10Kl   0x0012b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                    D10Kx   0x0012a6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                   D1616S   0x001272    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                D1616SNEG   0x001280    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 D1616SOK   0x00127c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  D1616SX   0x001292    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  DA1616S   0x001262    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-             Delay10KTCYx   0x00129c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+           ConvetBCDToInt   0x0005c6    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                   D10K_1   0x0017d2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kl   0x0017de    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kx   0x0017d0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                   D1616S   0x0016a4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x0016b2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x0016ae    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x0016c4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  DA1616S   0x001694    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+             Delay10KTCYx   0x0017c6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
             DelayFor20TCY   0x000014    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
             DelayFor500ms   0x000034    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-            EnablePullups   0x001332    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\PORTB\pullen.c
-               EscDataLCD   0x00017a    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               EscInstLCD   0x0000b0    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-             EscStringLCD   0x00019e    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-         EscStringLCD_ROM   0x0001f0    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                 FXD1616S   0x001250    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 FXD1616U   0x0012ca    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
-                Inic_Regs   0x000458    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                IniciaLCD   0x0000d4    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+            EnablePullups   0x00185c    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\PORTB\pullen.c
+               EscDataLCD   0x0001ec    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+               EscInstLCD   0x000122    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+             EscStringLCD   0x000210    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+         EscStringLCD_ROM   0x000262    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                 FXD1616S   0x001682    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 FXD1616U   0x0017f4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                 FXM1616S   0x0016ce    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+                Inic_Regs   0x0004fa    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                IniciaLCD   0x000146    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                     Pulse   0x000084    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-            TestPixelsLCD   0x000246    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-            TesteBusyFlag   0x00008e    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                VarrerKey   0x0002e2    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-       _D10KTCYXCODE_0010   0x0012ac    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-       _D10KTCYXCODE_001C   0x0012b8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-         ___else_lbl00049   0x000300    program     static                          
-         ___else_lbl00052   0x00031c    program     static                          
-         ___else_lbl00055   0x000338    program     static                          
-         ___else_lbl00058   0x000354    program     static                          
-         ___else_lbl00061   0x000376    program     static                          
-         ___else_lbl00064   0x000392    program     static                          
-         ___else_lbl00067   0x0003ae    program     static                          
-         ___else_lbl00070   0x0003ca    program     static                          
-         ___else_lbl00073   0x0003ec    program     static                          
-         ___else_lbl00076   0x000408    program     static                          
-         ___else_lbl00079   0x000424    program     static                          
-         ___else_lbl00082   0x000440    program     static                          
-           ___if_lbl00048   0x00030c    program     static                          
-           ___if_lbl00050   0x00030c    program     static                          
-           ___if_lbl00051   0x000328    program     static                          
-           ___if_lbl00053   0x000328    program     static                          
-           ___if_lbl00054   0x000344    program     static                          
-           ___if_lbl00056   0x000344    program     static                          
-           ___if_lbl00057   0x000360    program     static                          
-           ___if_lbl00059   0x000360    program     static                          
-           ___if_lbl00060   0x000382    program     static                          
-           ___if_lbl00062   0x000382    program     static                          
-           ___if_lbl00063   0x00039e    program     static                          
-           ___if_lbl00065   0x00039e    program     static                          
-           ___if_lbl00066   0x0003ba    program     static                          
-           ___if_lbl00068   0x0003ba    program     static                          
-           ___if_lbl00069   0x0003d6    program     static                          
-           ___if_lbl00071   0x0003d6    program     static                          
-           ___if_lbl00072   0x0003f8    program     static                          
-           ___if_lbl00074   0x0003f8    program     static                          
-           ___if_lbl00075   0x000414    program     static                          
-           ___if_lbl00077   0x000414    program     static                          
-           ___if_lbl00078   0x000430    program     static                          
-           ___if_lbl00080   0x000430    program     static                          
-           ___if_lbl00081   0x00044c    program     static                          
-           ___if_lbl00083   0x00044c    program     static                          
+               TSIGN1616A   0x00171a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+            TesteBusyFlag   0x000100    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+  TransmiteHoraToTerminal   0x0007d2    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                VarrerKey   0x000384    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+       _D10KTCYXCODE_0010   0x0017d6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_001C   0x0017e2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+         ___else_lbl00050   0x0003a2    program     static                          
+         ___else_lbl00053   0x0003be    program     static                          
+         ___else_lbl00056   0x0003da    program     static                          
+         ___else_lbl00059   0x0003f6    program     static                          
+         ___else_lbl00062   0x000418    program     static                          
+         ___else_lbl00065   0x000434    program     static                          
+         ___else_lbl00068   0x000450    program     static                          
+         ___else_lbl00071   0x00046c    program     static                          
+         ___else_lbl00074   0x00048e    program     static                          
+         ___else_lbl00077   0x0004aa    program     static                          
+         ___else_lbl00080   0x0004c6    program     static                          
+         ___else_lbl00083   0x0004e2    program     static                          
+          ___for_lbl00105   0x000746    program     static                          
+          ___for_lbl00106   0x000752    program     static                          
+          ___for_lbl00107   0x0006da    program     static                          
+          ___for_lbl00108   0x0007a6    program     static                          
+          ___for_lbl00109   0x0007b2    program     static                          
+          ___for_lbl00111   0x00075c    program     static                          
+           ___if_lbl00049   0x0003ae    program     static                          
+           ___if_lbl00051   0x0003ae    program     static                          
+           ___if_lbl00052   0x0003ca    program     static                          
+           ___if_lbl00054   0x0003ca    program     static                          
+           ___if_lbl00055   0x0003e6    program     static                          
+           ___if_lbl00057   0x0003e6    program     static                          
+           ___if_lbl00058   0x000402    program     static                          
+           ___if_lbl00060   0x000402    program     static                          
+           ___if_lbl00061   0x000424    program     static                          
+           ___if_lbl00063   0x000424    program     static                          
+           ___if_lbl00064   0x000440    program     static                          
+           ___if_lbl00066   0x000440    program     static                          
+           ___if_lbl00067   0x00045c    program     static                          
+           ___if_lbl00069   0x00045c    program     static                          
+           ___if_lbl00070   0x000478    program     static                          
+           ___if_lbl00072   0x000478    program     static                          
+           ___if_lbl00073   0x00049a    program     static                          
+           ___if_lbl00075   0x00049a    program     static                          
+           ___if_lbl00076   0x0004b6    program     static                          
+           ___if_lbl00078   0x0004b6    program     static                          
+           ___if_lbl00079   0x0004d2    program     static                          
+           ___if_lbl00081   0x0004d2    program     static                          
+           ___if_lbl00082   0x0004ee    program     static                          
+           ___if_lbl00084   0x0004ee    program     static                          
+           ___if_lbl00110   0x0007a2    program     static                          
        ___return_lbl00000   0x000032    program     static                          
+       ___return_lbl00000   0x00181e    program     static                          
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00000   0x0012f4    program     static                          
-       ___return_lbl00001   0x001330    program     static                          
-       ___return_lbl00002   0x00124e    program     static                          
-       ___return_lbl00047   0x000456    program     static                          
+       ___return_lbl00001   0x00185a    program     static                          
+       ___return_lbl00002   0x0017c4    program     static                          
+       ___return_lbl00048   0x0004f8    program     static                          
+       ___return_lbl00104   0x0007ba    program     static                          
                __config_0   0x300001    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                __config_1   0x300002    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                __config_2   0x300003    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                __config_3   0x300005    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                __config_4   0x300006    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                   __init   0x001336    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-              __string_10   0x001171    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_11   0x001160    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_12   0x001156    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_13   0x001146    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_15   0x001135    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_16   0x001124    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_17   0x00111a    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_18   0x001112    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_19   0x001108    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_20   0x0010f7    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_21   0x0010e6    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_22   0x0010d7    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_23   0x0010c6    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_24   0x0010b5    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_25   0x0010a4    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_26   0x001093    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_27   0x001082    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_28   0x001071    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_29   0x001061    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_30   0x001050    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_31   0x00103c    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               __string_6   0x0011a1    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               __string_7   0x00119c    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               __string_8   0x00118f    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               __string_9   0x00117e    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-            __zero_memory   0x0012f6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                _do_cinit   0x0011b2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                   __init   0x001860    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+              __string_10   0x00165f    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_11   0x00164e    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_12   0x001641    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_13   0x001630    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_14   0x001626    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_15   0x001616    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_16   0x001605    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_17   0x0015f4    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_18   0x0015ea    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_19   0x0015e2    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_20   0x0015d8    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_21   0x0015c7    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_22   0x0015b6    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_23   0x0015a7    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_24   0x001596    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_25   0x001585    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_26   0x001574    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_27   0x001563    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_28   0x001552    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_29   0x001541    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_30   0x001531    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_31   0x001520    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_32   0x00150c    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_33   0x00150a    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+               __string_8   0x001671    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+               __string_9   0x00166c    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+            __zero_memory   0x001820    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                _do_cinit   0x001728    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 _startup   0x001316    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                adminMenu   0x000c4e    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                cadastrar   0x000812    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                compare_l   0x00130c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-           configura_UART   0x000472    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                copy_loop   0x001224    program     static                          
-            copy_one_byte   0x00122a    program     static                          
-                     done   0x00124e    program     static                          
-             done_copying   0x001238    program     static                          
-                  endloop   0x0012f0    program     static                          
-           excluirUsuario   0x0005f0    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                     loop   0x0012d4    program     static                          
-                     loop   0x001326    program     static                          
-                   loop_h   0x001304    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   loop_l   0x00130e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     main   0x00102a    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              print2Linha   0x00058a    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               printLimpo   0x000524    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-             receberSenha   0x000cae    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                     test   0x0011cc    program     static                          
-        transmiteCaracter   0x000486    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-          transmiteString   0x0004a0    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-       transmiteStringRAM   0x0004e4    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               zero_block   0x001304    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                 _startup   0x001840    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                adminMenu   0x001100    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                cadastrar   0x000ce8    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                compare_l   0x001836    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+           configura_UART   0x000514    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+            convIntToChar   0x00008e    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                copy_loop   0x00179a    program     static                          
+            copy_one_byte   0x0017a0    program     static                          
+                     done   0x0017c4    program     static                          
+             done_copying   0x0017ae    program     static                          
+                  endloop   0x00181a    program     static                          
+           excluirUsuario   0x000aac    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                     loop   0x0017fe    program     static                          
+                     loop   0x001850    program     static                          
+                   loop_h   0x00182e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   loop_l   0x001838    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                     main   0x0014f8    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              print2Linha   0x00031e    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+               printLimpo   0x0002b8    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+            recebeHoraRTC   0x0006c0    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+             receberSenha   0x001164    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                     test   0x001742    program     static                          
+        transmiteCaracter   0x000528    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+          transmiteString   0x000542    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+       transmiteStringRAM   0x000586    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+               zero_block   0x00182e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    ADCON1   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -232,8 +246,8 @@ Linker Map File - Created Wed Nov 19 01:27:55 2014
                  DDRDbits   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      DDRE   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  DDREbits   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-            DelayCounter1   0x000013       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\delayd1.asm
-            DelayCounter2   0x000012       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\delayd2.asm
+            DelayCounter1   0x00001b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\delayd1.asm
+            DelayCounter2   0x00001a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\delayd2.asm
                   ECCP1AS   0x000fb6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
               ECCP1ASbits   0x000fb6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  ECCP1CON   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -463,7 +477,12 @@ Linker Map File - Created Wed Nov 19 01:27:55 2014
                   __REMB1   0x000004       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB2   0x000003       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB3   0x000002       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __tmp_0   0x000010       data     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                   __TEMP   0x000013       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB0   0x000013       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB1   0x000012       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB2   0x000011       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB3   0x000010       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                  __tmp_0   0x000014       data     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                 curr_byte   0x00008e       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                curr_entry   0x000090       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                  data_ptr   0x000092       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
@@ -483,121 +502,135 @@ Linker Map File - Created Wed Nov 19 01:27:55 2014
        ___return_lbl00000   0x000032    program     static                          
             DelayFor500ms   0x000034    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                     Pulse   0x000084    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-            TesteBusyFlag   0x00008e    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               EscInstLCD   0x0000b0    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                IniciaLCD   0x0000d4    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               EscDataLCD   0x00017a    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-             EscStringLCD   0x00019e    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-         EscStringLCD_ROM   0x0001f0    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-            TestPixelsLCD   0x000246    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                VarrerKey   0x0002e2    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-         ___else_lbl00049   0x000300    program     static                          
-           ___if_lbl00048   0x00030c    program     static                          
-           ___if_lbl00050   0x00030c    program     static                          
-         ___else_lbl00052   0x00031c    program     static                          
-           ___if_lbl00053   0x000328    program     static                          
-           ___if_lbl00051   0x000328    program     static                          
-         ___else_lbl00055   0x000338    program     static                          
-           ___if_lbl00056   0x000344    program     static                          
-           ___if_lbl00054   0x000344    program     static                          
-         ___else_lbl00058   0x000354    program     static                          
-           ___if_lbl00057   0x000360    program     static                          
-           ___if_lbl00059   0x000360    program     static                          
-         ___else_lbl00061   0x000376    program     static                          
-           ___if_lbl00060   0x000382    program     static                          
-           ___if_lbl00062   0x000382    program     static                          
-         ___else_lbl00064   0x000392    program     static                          
-           ___if_lbl00063   0x00039e    program     static                          
-           ___if_lbl00065   0x00039e    program     static                          
-         ___else_lbl00067   0x0003ae    program     static                          
-           ___if_lbl00066   0x0003ba    program     static                          
-           ___if_lbl00068   0x0003ba    program     static                          
-         ___else_lbl00070   0x0003ca    program     static                          
-           ___if_lbl00069   0x0003d6    program     static                          
-           ___if_lbl00071   0x0003d6    program     static                          
-         ___else_lbl00073   0x0003ec    program     static                          
-           ___if_lbl00074   0x0003f8    program     static                          
-           ___if_lbl00072   0x0003f8    program     static                          
-         ___else_lbl00076   0x000408    program     static                          
-           ___if_lbl00075   0x000414    program     static                          
-           ___if_lbl00077   0x000414    program     static                          
-         ___else_lbl00079   0x000424    program     static                          
-           ___if_lbl00080   0x000430    program     static                          
-           ___if_lbl00078   0x000430    program     static                          
-         ___else_lbl00082   0x000440    program     static                          
-           ___if_lbl00083   0x00044c    program     static                          
-           ___if_lbl00081   0x00044c    program     static                          
-       ___return_lbl00047   0x000456    program     static                          
-                Inic_Regs   0x000458    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-           configura_UART   0x000472    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-        transmiteCaracter   0x000486    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-          transmiteString   0x0004a0    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-       transmiteStringRAM   0x0004e4    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               printLimpo   0x000524    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              print2Linha   0x00058a    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-           excluirUsuario   0x0005f0    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                cadastrar   0x000812    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                adminMenu   0x000c4e    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-             receberSenha   0x000cae    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                     main   0x00102a    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_31   0x00103c    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_30   0x001050    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_29   0x001061    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_28   0x001071    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_27   0x001082    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_26   0x001093    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_25   0x0010a4    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_24   0x0010b5    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_23   0x0010c6    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_22   0x0010d7    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_21   0x0010e6    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_20   0x0010f7    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_19   0x001108    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_18   0x001112    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_17   0x00111a    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_16   0x001124    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_15   0x001135    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_13   0x001146    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_12   0x001156    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_11   0x001160    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-              __string_10   0x001171    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               __string_9   0x00117e    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               __string_8   0x00118f    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               __string_7   0x00119c    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-               __string_6   0x0011a1    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-                _do_cinit   0x0011b2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x0011cc    program     static                          
-                copy_loop   0x001224    program     static                          
-            copy_one_byte   0x00122a    program     static                          
-             done_copying   0x001238    program     static                          
-       ___return_lbl00002   0x00124e    program     static                          
-                     done   0x00124e    program     static                          
-                 FXD1616S   0x001250    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  DA1616S   0x001262    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                   D1616S   0x001272    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 D1616SOK   0x00127c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                D1616SNEG   0x001280    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  D1616SX   0x001292    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-             Delay10KTCYx   0x00129c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                    D10Kx   0x0012a6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                   D10K_1   0x0012a8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-       _D10KTCYXCODE_0010   0x0012ac    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                    D10Kl   0x0012b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-       _D10KTCYXCODE_001C   0x0012b8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                 FXD1616U   0x0012ca    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
-                     loop   0x0012d4    program     static                          
-                  endloop   0x0012f0    program     static                          
-       ___return_lbl00000   0x0012f4    program     static                          
-            __zero_memory   0x0012f6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-               zero_block   0x001304    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   loop_h   0x001304    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                compare_l   0x00130c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   loop_l   0x00130e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                 _startup   0x001316    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x001326    program     static                          
-       ___return_lbl00001   0x001330    program     static                          
-            EnablePullups   0x001332    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\PORTB\pullen.c
-                   __init   0x001336    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+            convIntToChar   0x00008e    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+            TesteBusyFlag   0x000100    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+               EscInstLCD   0x000122    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                IniciaLCD   0x000146    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+               EscDataLCD   0x0001ec    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+             EscStringLCD   0x000210    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+         EscStringLCD_ROM   0x000262    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+               printLimpo   0x0002b8    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              print2Linha   0x00031e    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                VarrerKey   0x000384    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+         ___else_lbl00050   0x0003a2    program     static                          
+           ___if_lbl00051   0x0003ae    program     static                          
+           ___if_lbl00049   0x0003ae    program     static                          
+         ___else_lbl00053   0x0003be    program     static                          
+           ___if_lbl00054   0x0003ca    program     static                          
+           ___if_lbl00052   0x0003ca    program     static                          
+         ___else_lbl00056   0x0003da    program     static                          
+           ___if_lbl00057   0x0003e6    program     static                          
+           ___if_lbl00055   0x0003e6    program     static                          
+         ___else_lbl00059   0x0003f6    program     static                          
+           ___if_lbl00058   0x000402    program     static                          
+           ___if_lbl00060   0x000402    program     static                          
+         ___else_lbl00062   0x000418    program     static                          
+           ___if_lbl00061   0x000424    program     static                          
+           ___if_lbl00063   0x000424    program     static                          
+         ___else_lbl00065   0x000434    program     static                          
+           ___if_lbl00066   0x000440    program     static                          
+           ___if_lbl00064   0x000440    program     static                          
+         ___else_lbl00068   0x000450    program     static                          
+           ___if_lbl00069   0x00045c    program     static                          
+           ___if_lbl00067   0x00045c    program     static                          
+         ___else_lbl00071   0x00046c    program     static                          
+           ___if_lbl00072   0x000478    program     static                          
+           ___if_lbl00070   0x000478    program     static                          
+         ___else_lbl00074   0x00048e    program     static                          
+           ___if_lbl00075   0x00049a    program     static                          
+           ___if_lbl00073   0x00049a    program     static                          
+         ___else_lbl00077   0x0004aa    program     static                          
+           ___if_lbl00078   0x0004b6    program     static                          
+           ___if_lbl00076   0x0004b6    program     static                          
+         ___else_lbl00080   0x0004c6    program     static                          
+           ___if_lbl00079   0x0004d2    program     static                          
+           ___if_lbl00081   0x0004d2    program     static                          
+         ___else_lbl00083   0x0004e2    program     static                          
+           ___if_lbl00082   0x0004ee    program     static                          
+           ___if_lbl00084   0x0004ee    program     static                          
+       ___return_lbl00048   0x0004f8    program     static                          
+                Inic_Regs   0x0004fa    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+           configura_UART   0x000514    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+        transmiteCaracter   0x000528    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+          transmiteString   0x000542    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+       transmiteStringRAM   0x000586    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+           ConvetBCDToInt   0x0005c6    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+            recebeHoraRTC   0x0006c0    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+          ___for_lbl00107   0x0006da    program     static                          
+          ___for_lbl00105   0x000746    program     static                          
+          ___for_lbl00106   0x000752    program     static                          
+          ___for_lbl00111   0x00075c    program     static                          
+           ___if_lbl00110   0x0007a2    program     static                          
+          ___for_lbl00108   0x0007a6    program     static                          
+          ___for_lbl00109   0x0007b2    program     static                          
+       ___return_lbl00104   0x0007ba    program     static                          
+  TransmiteHoraToTerminal   0x0007d2    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+           excluirUsuario   0x000aac    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                cadastrar   0x000ce8    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                adminMenu   0x001100    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+             receberSenha   0x001164    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                     main   0x0014f8    program     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_33   0x00150a    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_32   0x00150c    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_31   0x001520    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_30   0x001531    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_29   0x001541    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_28   0x001552    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_27   0x001563    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_26   0x001574    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_25   0x001585    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_24   0x001596    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_23   0x0015a7    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_22   0x0015b6    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_21   0x0015c7    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_20   0x0015d8    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_19   0x0015e2    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_18   0x0015ea    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_17   0x0015f4    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_16   0x001605    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_15   0x001616    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_14   0x001626    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_13   0x001630    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_12   0x001641    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_11   0x00164e    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+              __string_10   0x00165f    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+               __string_9   0x00166c    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+               __string_8   0x001671    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+                 FXD1616S   0x001682    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  DA1616S   0x001694    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                   D1616S   0x0016a4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x0016ae    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x0016b2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x0016c4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 FXM1616S   0x0016ce    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+               TSIGN1616A   0x00171a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+                _do_cinit   0x001728    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x001742    program     static                          
+                copy_loop   0x00179a    program     static                          
+            copy_one_byte   0x0017a0    program     static                          
+             done_copying   0x0017ae    program     static                          
+       ___return_lbl00002   0x0017c4    program     static                          
+                     done   0x0017c4    program     static                          
+             Delay10KTCYx   0x0017c6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kx   0x0017d0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                   D10K_1   0x0017d2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_0010   0x0017d6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kl   0x0017de    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_001C   0x0017e2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                 FXD1616U   0x0017f4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                     loop   0x0017fe    program     static                          
+                  endloop   0x00181a    program     static                          
+       ___return_lbl00000   0x00181e    program     static                          
+            __zero_memory   0x001820    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   loop_h   0x00182e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+               zero_block   0x00182e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                compare_l   0x001836    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   loop_l   0x001838    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                 _startup   0x001840    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x001850    program     static                          
+       ___return_lbl00001   0x00185a    program     static                          
+            EnablePullups   0x00185c    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\PORTB\pullen.c
+                   __init   0x001860    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
                __config_0   0x300001    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                __config_1   0x300002    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                __config_2   0x300003    program     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
@@ -624,9 +657,14 @@ Linker Map File - Created Wed Nov 19 01:27:55 2014
                  __BARGB1   0x00000d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
                  __BARGB0   0x00000e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
                    __BEXP   0x00000f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                  __tmp_0   0x000010       data     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
-            DelayCounter2   0x000012       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\delayd2.asm
-            DelayCounter1   0x000013       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\delayd1.asm
+                 __TEMPB3   0x000010       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB2   0x000011       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB1   0x000012       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                   __TEMP   0x000013       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB0   0x000013       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                  __tmp_0   0x000014       data     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
+            DelayCounter2   0x00001a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\delayd2.asm
+            DelayCounter1   0x00001b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\delayd1.asm
                numeroUser   0x000060       data     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                     vUser   0x000062       data     extern D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
                         x   0x00008a       data     static D:\documentos\GitHub\ControleAcesso_pic18\Codigo.c
@@ -635,41 +673,41 @@ Linker Map File - Created Wed Nov 19 01:27:55 2014
                curr_entry   0x000090       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                  data_ptr   0x000092       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                   SPPDATA   0x000f62       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   SPPCFG   0x000f63       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                SPPCFGbits   0x000f63       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   SPPCFG   0x000f63       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                SPPEPSbits   0x000f64       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    SPPEPS   0x000f64       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   SPPCON   0x000f65       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                SPPCONbits   0x000f65       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   SPPCON   0x000f65       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      UFRM   0x000f66       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                UFRMLbits   0x000f66       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     UFRML   0x000f66       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                UFRMLbits   0x000f66       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     UFRMH   0x000f67       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 UFRMHbits   0x000f67       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                      UIR   0x000f68       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                   UIRbits   0x000f68       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                      UIR   0x000f68       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                   UIEbits   0x000f69       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                       UIE   0x000f69       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      UEIR   0x000f6a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  UEIRbits   0x000f6a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      UEIE   0x000f6b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  UEIEbits   0x000f6b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                    USTAT   0x000f6c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 USTATbits   0x000f6c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                    USTAT   0x000f6c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  UCONbits   0x000f6d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      UCON   0x000f6d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                UADDRbits   0x000f6e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     UADDR   0x000f6e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                UADDRbits   0x000f6e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      UCFG   0x000f6f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  UCFGbits   0x000f6f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      UEP0   0x000f70       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  UEP0bits   0x000f70       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  UEP1bits   0x000f71       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      UEP1   0x000f71       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                 UEP2bits   0x000f72       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      UEP2   0x000f72       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                 UEP3bits   0x000f73       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                 UEP2bits   0x000f72       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      UEP3   0x000f73       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                 UEP3bits   0x000f73       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  UEP4bits   0x000f74       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      UEP4   0x000f74       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  UEP5bits   0x000f75       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -678,8 +716,8 @@ Linker Map File - Created Wed Nov 19 01:27:55 2014
                      UEP6   0x000f76       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      UEP7   0x000f77       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  UEP7bits   0x000f77       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     UEP8   0x000f78       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  UEP8bits   0x000f78       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                     UEP8   0x000f78       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  UEP9bits   0x000f79       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      UEP9   0x000f79       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     UEP10   0x000f7a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -690,22 +728,22 @@ Linker Map File - Created Wed Nov 19 01:27:55 2014
                 UEP12bits   0x000f7c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     UEP13   0x000f7d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 UEP13bits   0x000f7d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                    UEP14   0x000f7e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 UEP14bits   0x000f7e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                    UEP15   0x000f7f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                    UEP14   0x000f7e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 UEP15bits   0x000f7f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                    UEP15   0x000f7f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 PORTAbits   0x000f80       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     PORTA   0x000f80       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                    PORTB   0x000f81       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 PORTBbits   0x000f81       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                    PORTB   0x000f81       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     PORTC   0x000f82       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 PORTCbits   0x000f82       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     PORTD   0x000f83       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 PORTDbits   0x000f83       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     PORTE   0x000f84       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 PORTEbits   0x000f84       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     LATA   0x000f89       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  LATAbits   0x000f89       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                     LATA   0x000f89       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      LATB   0x000f8a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  LATBbits   0x000f8a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      LATC   0x000f8b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -715,46 +753,46 @@ Linker Map File - Created Wed Nov 19 01:27:55 2014
                      LATE   0x000f8d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  LATEbits   0x000f8d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 TRISAbits   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                    TRISA   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      DDRA   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                    TRISA   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  DDRAbits   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  DDRBbits   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      DDRB   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 TRISBbits   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     TRISB   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                 DDRCbits   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     DDRC   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                TRISCbits   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     TRISC   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                 DDRDbits   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                     DDRC   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                 DDRCbits   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                TRISCbits   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      DDRD   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                 DDRDbits   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     TRISD   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 TRISDbits   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                TRISEbits   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      DDRE   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                 DDREbits   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     TRISE   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                TRISEbits   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                 DDREbits   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
               OSCTUNEbits   0x000f9b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                   OSCTUNE   0x000f9b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  PIE1bits   0x000f9d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      PIE1   0x000f9d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     PIR1   0x000f9e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  PIR1bits   0x000f9e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     IPR1   0x000f9f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                     PIR1   0x000f9e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  IPR1bits   0x000f9f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                     IPR1   0x000f9f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      PIE2   0x000fa0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  PIE2bits   0x000fa0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     PIR2   0x000fa1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  PIR2bits   0x000fa1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     IPR2   0x000fa2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                     PIR2   0x000fa1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  IPR2bits   0x000fa2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   EECON1   0x000fa6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                     IPR2   0x000fa2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                EECON1bits   0x000fa6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   EECON1   0x000fa6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    EECON2   0x000fa7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    EEDATA   0x000fa8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     EEADR   0x000fa9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                RCSTAbits   0x000fab       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     RCSTA   0x000fab       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                RCSTAbits   0x000fab       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     TXSTA   0x000fac       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 TXSTAbits   0x000fac       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     TXREG   0x000fad       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -765,33 +803,33 @@ Linker Map File - Created Wed Nov 19 01:27:55 2014
                     T3CON   0x000fb1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     TMR3L   0x000fb2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     TMR3H   0x000fb3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                CMCONbits   0x000fb4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     CMCON   0x000fb4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                CMCONbits   0x000fb4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    CVRCON   0x000fb5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                CVRCONbits   0x000fb5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-               CCP1ASbits   0x000fb6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   CCP1AS   0x000fb6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                  ECCP1AS   0x000fb6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
               ECCP1ASbits   0x000fb6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-             ECCP1DELbits   0x000fb7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                 ECCP1DEL   0x000fb7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                  CCP1DEL   0x000fb7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                  ECCP1AS   0x000fb6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   CCP1AS   0x000fb6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+               CCP1ASbits   0x000fb6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
               CCP1DELbits   0x000fb7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                 ECCP1DEL   0x000fb7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+             ECCP1DELbits   0x000fb7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                  CCP1DEL   0x000fb7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
               BAUDCTLbits   0x000fb8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                  BAUDCTL   0x000fb8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-              BAUDCONbits   0x000fb8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                   BAUDCON   0x000fb8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                  CCP2CON   0x000fba       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+              BAUDCONbits   0x000fb8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                  BAUDCTL   0x000fb8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
               CCP2CONbits   0x000fba       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                  CCP2CON   0x000fba       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     CCPR2   0x000fbb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    CCPR2L   0x000fbb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    CCPR2H   0x000fbc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  ECCP1CON   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
              ECCP1CONbits   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                  CCP1CON   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
               CCP1CONbits   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   CCPR1L   0x000fbe       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                  CCP1CON   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     CCPR1   0x000fbe       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   CCPR1L   0x000fbe       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    CCPR1H   0x000fbf       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                ADCON2bits   0x000fc0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    ADCON2   0x000fc0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -799,13 +837,13 @@ Linker Map File - Created Wed Nov 19 01:27:55 2014
                    ADCON1   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   ADRESL   0x000fc3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     ADRES   0x000fc3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   ADRESL   0x000fc3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    ADRESH   0x000fc4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                   SSPCON2   0x000fc5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
               SSPCON2bits   0x000fc5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                  SSPCON1   0x000fc6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
               SSPCON1bits   0x000fc6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                  SSPCON1   0x000fc6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                   SSPSTAT   0x000fc7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
               SSPSTATbits   0x000fc7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    SSPADD   0x000fc8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -814,28 +852,28 @@ Linker Map File - Created Wed Nov 19 01:27:55 2014
                 T2CONbits   0x000fca       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                       PR2   0x000fcb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      TMR2   0x000fcc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                    T1CON   0x000fcd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 T1CONbits   0x000fcd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                    T1CON   0x000fcd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     TMR1L   0x000fce       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     TMR1H   0x000fcf       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                 RCONbits   0x000fd0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      RCON   0x000fd0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                 RCONbits   0x000fd0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    WDTCON   0x000fd1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                WDTCONbits   0x000fd1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                  HLVDCON   0x000fd2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
               HLVDCONbits   0x000fd2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-               LVDCONbits   0x000fd2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    LVDCON   0x000fd2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-               OSCCONbits   0x000fd3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                  HLVDCON   0x000fd2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+               LVDCONbits   0x000fd2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    OSCCON   0x000fd3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                    T0CON   0x000fd5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+               OSCCONbits   0x000fd3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 T0CONbits   0x000fd5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                    T0CON   0x000fd5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     TMR0L   0x000fd6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     TMR0H   0x000fd7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-               STATUSbits   0x000fd8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    STATUS   0x000fd8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     FSR2   0x000fd9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+               STATUSbits   0x000fd8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     FSR2L   0x000fd9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                     FSR2   0x000fd9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     FSR2H   0x000fda       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    PLUSW2   0x000fdb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                   PREINC2   0x000fdc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -843,8 +881,8 @@ Linker Map File - Created Wed Nov 19 01:27:55 2014
                  POSTINC2   0x000fde       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     INDF2   0x000fdf       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                       BSR   0x000fe0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                    FSR1L   0x000fe1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      FSR1   0x000fe1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                    FSR1L   0x000fe1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     FSR1H   0x000fe2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    PLUSW1   0x000fe3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                   PREINC1   0x000fe4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -852,8 +890,8 @@ Linker Map File - Created Wed Nov 19 01:27:55 2014
                  POSTINC1   0x000fe6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     INDF1   0x000fe7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      WREG   0x000fe8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     FSR0   0x000fe9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     FSR0L   0x000fe9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                     FSR0   0x000fe9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     FSR0H   0x000fea       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    PLUSW0   0x000feb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                   PREINC0   0x000fec       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -862,20 +900,20 @@ Linker Map File - Created Wed Nov 19 01:27:55 2014
                     INDF0   0x000fef       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
               INTCON3bits   0x000ff0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                   INTCON3   0x000ff0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-              INTCON2bits   0x000ff1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                   INTCON2   0x000ff1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   INTCON   0x000ff2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+              INTCON2bits   0x000ff1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                INTCONbits   0x000ff2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                    PRODL   0x000ff3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   INTCON   0x000ff2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      PROD   0x000ff3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                    PRODL   0x000ff3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     PRODH   0x000ff4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    TABLAT   0x000ff5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   TBLPTR   0x000ff6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                   TBLPTRL   0x000ff6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   TBLPTR   0x000ff6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                   TBLPTRH   0x000ff7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                   TBLPTRU   0x000ff8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                      PCL   0x000ff9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                        PC   0x000ff9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                      PCL   0x000ff9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    PCLATH   0x000ffa       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    PCLATU   0x000ffb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                STKPTRbits   0x000ffc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm

@@ -37,6 +37,12 @@
 #define l3 PORTBbits.RB6
 #define l4 PORTBbits.RB7 //Pinos para leitura do keyboard
 
+#define  _CE PORTCbits.RC0
+#define  _CLK PORTCbits.RC1
+#define  _IO PORTCbits.RC2
+#define _ALTERA_IO TRISCbits.RC2
+
+
 //declara as suas variaveis de software
 typedef struct usuario Usuario;
 
@@ -52,6 +58,7 @@ Usuario vUser[5] = {{"99","9999"},
 					{"ff","ffff"},
 					{"ff","ffff"}};
 
+
 void DelayFor20TCY(void){
 	Nop();Nop();Nop();Nop();Nop();
 	Nop();Nop();Nop();Nop();Nop();
@@ -60,17 +67,26 @@ void DelayFor20TCY(void){
 
 void DelayFor500ms(void){
 	int i;
-	for(i=0;i<100;i++){
+	for(i=0;i<120;i++){
 		Delay10KTCYx(1);
 	}
 }
 
+//Gera um pulso no pino Enable do LCD
 void Pulse(void){
 	DelayFor20TCY();
 	_EN = 1;
 	DelayFor20TCY();
 	_EN = 0;
 }
+
+char convIntToChar (int x){
+
+	char numero[11] ={"0123456789"};
+	
+	return numero[x];
+}
+
 
 //Testa se o LCD está ocupado
 unsigned char TesteBusyFlag(void){
@@ -135,7 +151,7 @@ void EscDataLCD(char _data){
 	TRIS_PORT_LCD = 0xFF;
 }
 
-//Escreve string da memória RAM
+//Escreve string da memória RAM no LCD
 void EscStringLCD(char *buff){
 	while(*buff){
 		while(TesteBusyFlag());
@@ -146,7 +162,7 @@ void EscStringLCD(char *buff){
 	return;
 }
 
-//Escreve string da memória ROM
+//Escreve string da memória ROM no LCD
 void EscStringLCD_ROM(const rom char *buff){
 	while(*buff){
 		while(TesteBusyFlag());
@@ -157,34 +173,38 @@ void EscStringLCD_ROM(const rom char *buff){
 	return;
 }
 
-void TestPixelsLCD(void){
-	unsigned char BffCheio[32];
-	unsigned char i;
-	EscInstLCD(0x80);
+//Limpa e escreve na primeira linha do LCD
+void printLimpo(const rom char *buff){
+	
+	EscInstLCD(0x01); //Limpa LCD e mostra cursor piscando na primeira linha
 	while(TesteBusyFlag());
 	
-	for(i=0;i<32;i++){
-		if(i<16){
-			EscDataLCD(0xFF);
-			while(TesteBusyFlag());
-		}
-		else if(i==16){
-			EscInstLCD(0xC0);
-			while(TesteBusyFlag());
-			
-			EscDataLCD(0xFF);
-			while(TesteBusyFlag());
-		}
-		else{
-			EscDataLCD(0xFF);
-			while(TesteBusyFlag());
-		}
+	while(*buff){
+		while(TesteBusyFlag());
+		EscDataLCD(*buff);
+		buff++;
 	}
+	while(TesteBusyFlag());
+	return;
+}
+
+//Muda cursor para segunda linha escreve
+void print2Linha(const rom char *buff){
 	
+	EscInstLCD(0xC0); //cursor para segunda linha
+	while(TesteBusyFlag());
+	
+	while(*buff){
+		while(TesteBusyFlag());
+		EscDataLCD(*buff);
+		buff++;
+	}
+	while(TesteBusyFlag());
+	return;
 }
 
 
-//Varre o teclado
+//Varre o teclado a procura de alterações
 char VarrerKey(void){  //Função para Varredura do tecla
 					
 	static unsigned char x = 0; 		
@@ -311,11 +331,11 @@ void Inic_Regs (void){   //Função para inicializar os pino
 
 }
 
-//Confirgurar saida serial
+//Confirgurar saida serial do PIC
 void configura_UART(void){
 	
 	TRISCbits.TRISC7 = 1;
-	TRISCbits.TRISC7 = 1;
+	TRISCbits.TRISC6 = 1;
 	TXSTA = 0b00100100;
 	RCSTA = 0b10010000;
 	BAUDCON = 0b00000000;
@@ -330,6 +350,7 @@ void transmiteCaracter(char dado){
 	
 }
 
+//Transmite uma string da memoria Rom pela serial
 void transmiteString (const rom char *buff){
 	while(*buff){
 		while(!PIR1bits.TXIF);
@@ -339,6 +360,7 @@ void transmiteString (const rom char *buff){
 
 }
 
+//Transmite uma string da memoria Ram pela serial
 void transmiteStringRAM (char *buff){
 	while(*buff){
 		while(!PIR1bits.TXIF);
@@ -348,35 +370,100 @@ void transmiteStringRAM (char *buff){
 
 }
 
-//Limpa e escreve na primeira linha
-void printLimpo(const rom char *buff){
+int ConvetBCDToInt(char bcd){
 	
-	EscInstLCD(0x01); //Limpa LCD e mostra cursor piscando na primeira linha
-	while(TesteBusyFlag());
+	int i;
+	char eliminaBits;
+	int fator1 = 1;
+	int fator2 = 0;
 	
-	while(*buff){
-		while(TesteBusyFlag());
-		EscDataLCD(*buff);
-		buff++;
+	for(i=0;i<4;i++){
+		eliminaBits = 1 << i;
+		fator2 += ((eliminaBits & bcd) >> i) * fator1;
+		fator1 *= 2;
 	}
-	while(TesteBusyFlag());
-	return;
+	
+	return fator2;
 }
 
-//Escreve na segunda linha
-void print2Linha(const rom char *buff){
-	
-	EscInstLCD(0xC0); //cursor para segunda linha
-	while(TesteBusyFlag());
-	
-	while(*buff){
-		while(TesteBusyFlag());
-		EscDataLCD(*buff);
-		buff++;
+//função para imprimir hora no terminal
+char recebeHoraRTC(char instrucao){
+
+	char recebido = 0b00000000;
+	char teste;
+	int aux;
+
+	_CE = 1;								//Desbloqueia o RTC para leitura ou escrita(dependendo da instrução)	
+	_ALTERA_IO = 0;							//O pino I/O passa a ser de Escrita		
+			
+	//Enviar uma instrução
+	for (aux = 0; aux<=7 ; aux++){			//Cada interação ira enviar um bit da instrução
+		_CLK = 0;							//O RTC ler o bit na Transição 0->1, garanto que está em zero
+		Nop();
+		teste = 1 << aux;					//qual bit será enviado, na primeira intereção o 7	
+		//(0b00000001) << 7 = (0b10000000)	
+		_IO = (teste & instrucao) >> aux;	//Apenas o bit que quero usar será presercvado, o restante será zero
+		//(0b10000000) & (0b11000110) = (0b10000000) >> 7 = (0b00000001)
+		Nop();		
+		//DelayFor20TCY();					
+		_CLK = 1;							//Finaliza a transmição do bit realizando a transição do clock	
+		Nop();
 	}
-	while(TesteBusyFlag());
-	return;
+	
+	_ALTERA_IO = 1;   //O pino I/O passa a ser de leitura
+	
+	for (aux = 0; aux <=7; aux++){
+		_CLK = 0;  							//Para leitura, RTC alterar o estado do pino I/O na transição 1->0
+		Nop();
+		 if(_IO){							//Se o estado do pino for 1
+		 	teste = 1 << aux;				//teste recebe 1 no bit que está sendo lido
+		 	//(0b00000001) << 7 = (0b10000000)
+		 	recebido = (recebido | teste);	//um bit de recebido(na posição "aux")é atualizado
+		 	//(0b00000000) | (0b10000000) = (0b10000000)
+		 }
+		 _CLK = 1;							//Realiza a transição 1->0 é atualizado
+ 	   	Nop();
+	}
+	_CE = 0 ; 				//finalizada leitura, bloqueio do RTC
+	_ALTERA_IO = 0;			//O pino I/O passa a ser de saida
+	
+	return recebido;
 }
+
+void TransmiteHoraToTerminal (void){
+
+	char eliminaBits = 0b00110000;
+	char imprimir [15] = {"HH:MM DD/mm/AA"}; 
+	char aux;
+	char instrucoes[5] = {0x85,0x83,0x87,0x89,0x8D};
+	char dados;
+	int cont = 0;
+	int i = 0;
+	
+	dados = recebeHoraRTC(instrucoes[cont]);
+	aux = (eliminaBits & dados) >> 4;
+	imprimir[i++] = convIntToChar(ConvetBCDToInt(aux));
+	
+	eliminaBits = 0b00001111;
+	aux = (eliminaBits & dados);
+	imprimir[i++] = convIntToChar(ConvetBCDToInt(aux));
+	i++;
+	
+	for(cont = 1; cont < 5; cont++){
+		eliminaBits = 0b11110000;
+		dados = recebeHoraRTC(instrucoes[cont]);
+		aux = (eliminaBits & dados) >> 4;
+		imprimir[i++] = convIntToChar(ConvetBCDToInt(aux));
+		
+		eliminaBits = 0b00001111;
+		aux = (eliminaBits & dados);
+		imprimir[i++] = convIntToChar(ConvetBCDToInt(aux));
+		i++;
+	}
+	
+	transmiteStringRAM(imprimir);
+}
+
 
 //Exclui Usuario
 void excluirUsuario(void){
@@ -436,7 +523,6 @@ void excluirUsuario(void){
 void cadastrar(void){
 	Usuario userTemp;
 	short aux,i;
-	char numero[11] ={"0123456789"};
 	char digitado;
 	char senha[5];
 	
@@ -451,9 +537,9 @@ void cadastrar(void){
 	}
 	
 	aux = numeroUser/10;
-	userTemp.id[0] = numero[aux];
+	userTemp.id[0] = convIntToChar(aux);
 	aux = numeroUser%10;
-	userTemp.id[1] = numero[aux];
+	userTemp.id[1] = convIntToChar(aux);
 	userTemp.id[2] = '\0';
 	aux = 0;
 	
@@ -600,7 +686,9 @@ void receberSenha(void){
 			printLimpo(" Aesso Liberado ");
 			transmiteString("Usuario: ");
 			transmiteStringRAM(userTemp.id);
-			transmiteString(", Acesso Liberado.\n");
+			transmiteString(", Acesso Liberado. ");
+			TransmiteHoraToTerminal();
+			transmiteString("\r");
 			
 		}
 		DelayFor500ms();
@@ -608,7 +696,10 @@ void receberSenha(void){
 	}
 }
 
+
+
 void main(void){
+	
 	
 	Inic_Regs ();
 	IniciaLCD();
